@@ -6,8 +6,11 @@ import urlSchema from './models/shorturl.model.js'
 import short_url from './routes/short_url.route.js'
 import { redirectFromShortUrl } from './controllers/short_url.controller.js'
 import { errorHandler } from './utils/errorHandler.js'
+import cors from 'cors'
+
 
 const app = express()
+app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 

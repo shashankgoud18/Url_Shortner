@@ -9,7 +9,6 @@ const shortUrlSchema = new mongoose.Schema({
     short_url:{
         type:String,
         required:true,
-        default:() => nanoid(8),
         index:true,
         unique:true
     },
